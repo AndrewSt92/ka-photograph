@@ -1,0 +1,136 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     },
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true
+//   },
+//   "include": ["src", "tests", "__mocks__", "jest.setup.ts"],
+//   "exclude": ["node_modules", "dist", "coverage"],
+// }
+
+//correct with tests
+// work well
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "paths": {
+//       "@/*": ["./src/*"],
+//       "tests/*": ["./tests/*"]
+//     },
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true
+//   },
+//   // "include": ["src", "tests", "__mocks__", "jest.setup.ts"],
+//   "include": ["src"],
+//   "exclude": ["node_modules", "dist", "coverage", "tests"],
+//   "references": [{ "path": "./tsconfig.node.json" }]
+// }
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"],
+      "tests": ["./tests"],
+      "tests/*": ["./tests/*"]
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "coverage", "tests"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
+//correct with docker
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     // "baseUrl": ".",
+//     "paths": {
+//       //  "@/*": ["src/*"],
+//       "@/*": ["./src/*"],
+//       "tests/*": ["./tests/*"]
+//     },
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true
+//   },
+//   "include": ["src", "tests", "__mocks__", "jest.setup.ts"],
+//   "exclude": [
+//     "node_modules",
+//     "dist",
+//     "coverage",
+//     "**/*.test.ts",
+//     "**/*.test.tsx",
+//     "**/*.spec.ts",
+//     "**/*.spec.tsx",
+//   ],
+//   "references": [{ "path": "./tsconfig.node.json" }]
+// }

@@ -1,0 +1,28 @@
+import { useNavigate } from 'react-router-dom';
+
+import { arrowLeft } from '@/assets';
+
+import { Button } from '../Button';
+import Icon from '../Icon';
+
+const GoBackButton = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
+  return (
+    <Button
+      size="iconLg"
+      intent="primary"
+      onClick={handleGoBack}
+      aria-label="Повернутися назад"
+      data-testid="go-back-button"
+    >
+      <Icon icon={arrowLeft} name="arrow-left" size="h-8 w-8" />
+    </Button>
+  );
+};
+
+export default GoBackButton;
